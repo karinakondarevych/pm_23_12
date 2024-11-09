@@ -1,0 +1,12 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.custom-bg {
+    background-color: #283439;
+    color: white;
+}
+
+.vertical {
+   writing-mode:vertical-lr;
+}
