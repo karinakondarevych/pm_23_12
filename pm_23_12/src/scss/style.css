@@ -1,5 +1,5 @@
-body {
-    font-family: 'Times New Roman', Times, serif;
+.body {
+    font-family: 'Raleway Roman';
 }
 
 .custom-bg {
@@ -9,4 +9,27 @@ body {
 
 .vertical {
    writing-mode:vertical-lr;
+}
+
+.image {
+    width: 420px;
+    height: auto;
+    border: 10px solid white;
+    float: right;
+    margin-left: 135px;
+}
+
+.year, .fas {
+    color: #02c5dc;
+}
+
+.far {
+    color: #728086;
+}
+
+.fa-user-tie {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #02c5dc;
 }
