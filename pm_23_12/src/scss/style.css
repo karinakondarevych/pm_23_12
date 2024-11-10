@@ -12,24 +12,22 @@
 }
 
 .image {
-    width: 420px;
+    width: 320px;
     height: auto;
     border: 10px solid white;
-    float: right;
-    margin-left: 135px;
+    margin-left: 236px;
 }
 
-.year, .fas {
+.fas {
     color: #02c5dc;
+    font-size: small;
 }
 
 .far {
     color: #728086;
+    font-size: small;
 }
 
-.fa-user-tie {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #02c5dc;
+.year {
+    color: #02c5dc;
 }
