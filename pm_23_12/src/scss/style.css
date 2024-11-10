@@ -1,5 +1,5 @@
-.body {
-    font-family: 'Raleway Roman';
+.html {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .custom-bg {
@@ -7,18 +7,23 @@
     color: white;
 }
 
+.n {
+    font-size: 50px;
+    white-space: nowrap;
+}
+
 .vertical {
-   writing-mode:vertical-lr;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    text-align: right;
+    text-transform: uppercase;
 }
 
 .image {
-    width: 320px;
-    height: auto;
     border: 10px solid white;
-    margin-left: 236px;
 }
 
-.fas {
+.fas, .fa-circle {
     color: #02c5dc;
     font-size: small;
 }
@@ -31,3 +36,48 @@
 .year {
     color: #02c5dc;
 }
+
+.fa-user-tie, .fa-graduation-cap, .fa-chart-pie, .fa-user, .fa-briefcase, .fa-users {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: #02c5dc;
+    color: #283439;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 7px;
+}
+
+.fa-phone-volume, .fa-globe, .fa-location-dot {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: #02c5dc;
+    color: #283439;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+/*.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  
+  .icon {
+    position: relative;
+    margin: 20px 0; /* Відступи між іконками 
+  }
+  
+  .icon::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(0); /* Центрує лінію по горизонталі 
+    width: 2px;
+    height: 30px; /* Висота лінії 
+    background-color: black;
+    top: -50px; /* Відступ від іконки 
+  }*/
