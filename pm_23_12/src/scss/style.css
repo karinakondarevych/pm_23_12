@@ -1,4 +1,4 @@
-.html {
+.body {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -7,7 +7,7 @@
     color: white;
 }
 
-.n {
+.name {
     font-size: 50px;
     white-space: nowrap;
 }
@@ -20,12 +20,28 @@
 }
 
 .image {
+    width: 320px;
+    height: auto;
     border: 10px solid white;
+    float: right;
 }
 
-.fas, .fa-circle {
+.fas {
     color: #02c5dc;
     font-size: small;
+}
+
+
+.fa-circle{
+    color: #02c5dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    margin-right: 15px;
+    margin-left: 10px;
+    margin-top: 5px;
+    position: relative;
 }
 
 .far {
@@ -39,12 +55,12 @@
 
 .fa-user-tie, .fa-graduation-cap, .fa-chart-pie, .fa-user, .fa-briefcase, .fa-users {
     border-radius: 50%;
-    width: 35px;
-    height: 35px;
+    width: 38px;
+    height: 38px;
     background-color: #02c5dc;
     color: #283439;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     padding-top: 7px;
 }
 
@@ -59,25 +75,88 @@
     padding-top: 5px;
 }
 
-/*.icon-container {
+.education, .contact-me, .job-experience, .references {
+    position: relative;
+}
+  
+.education h4, .contact-me h4, .job-experience h4, .references h4{
     display: flex;
-    flex-direction: column;
+    align-items: center;
+}
+  
+.education-item, .contact-item, .job-experience-item, .reference-item {
+    display: flex;
     align-items: flex-start;
     position: relative;
-  }
-  
-  .icon {
-    position: relative;
-    margin: 20px 0; /* Відступи між іконками 
-  }
-  
-  .icon::after {
-    content: '';
+}
+
+.first-item-ed::before {
+    content: "";
     position: absolute;
-    left: 50%;
-    transform: translateX(0); /* Центрує лінію по горизонталі 
+    left: 64px; /* Позиція лінії */
+    top: 30px;
+    height: 40px;
     width: 2px;
-    height: 30px; /* Висота лінії 
-    background-color: black;
-    top: -50px; /* Відступ від іконки 
-  }*/
+    background-color: #02c5dc;
+}
+
+.education-item::before {
+    content: "";
+    position: absolute;
+    left: 16px; /* Позиція лінії */
+    top: 25px;
+    height: 85px;
+    width: 2px;
+    background-color: #02c5dc;
+
+}
+
+.first-item::before {
+    content: "";
+    position: absolute;
+    left: 40px; /* Позиція лінії */
+    top: 35px;
+    height: 35px;
+    width: 3px;
+    background-color: #02c5dc;
+}
+
+.first-item-contact::before{
+    content: "";
+    position: absolute;
+    left: 40px; /* Позиція лінії */
+    top: 60px;
+    height: 40px;
+    width: 3px;
+    background-color: #02c5dc;
+}
+
+.contact-item::before {
+    content: "";
+    position: absolute;
+    left: 16px; /* Позиція лінії */
+    top: 25px;
+    height: 40px;
+    width: 3px;
+    background-color: #02c5dc;
+}
+
+.job-experience-item::before {
+    content: "";
+    position: absolute;
+    left: 16px; /* Позиція лінії */
+    top: 25px;
+    height: 127px;
+    width: 3px;
+    background-color: #02c5dc;
+}
+
+.reference-item::before {
+    content: "";
+    position: absolute;
+    left: 16px; /* Позиція лінії */
+    top: 25px;
+    height: 90px;
+    width: 3px;
+    background-color: #02c5dc;
+}
