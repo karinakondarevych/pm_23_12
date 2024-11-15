@@ -1,0 +1,111 @@
+@import 'mixin';
+@import 'colors';
+
+.body {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.custom-bg {
+    background-color: $background-color;
+    color: $secondary-color;
+}
+
+.name {
+    font-size: 55px;
+    white-space: nowrap;
+}
+
+.vertical {
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    text-align: right;
+    text-transform: uppercase;
+    line-height: 0.01;
+    margin-left: 70px;
+}
+
+.image {
+    height: 450px;
+    width: 320px;
+    border: 10px solid $secondary-color;
+    margin-right: -22px;
+}
+
+.fas {
+    @include stars($primary-color, small);
+}
+
+.far {
+    @include stars($primary-color, small);
+}
+
+.year {
+    color: $primary-color;
+}
+
+.fa-circle{
+    color: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    margin-right: 15px;
+    margin-left: 10px;
+    margin-top: 5px;
+    position: relative;
+}
+
+.education, .contact-me, .job-experience, .references {
+    position: relative;
+}
+
+.education, .contact-me, .job-experience, .references {
+    position: relative;
+  
+    h4 {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.education-item, .contact-item, .job-experience-item, .reference-item {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.fa-user-tie, .fa-graduation-cap, .fa-chart-pie, .fa-user, .fa-briefcase, .fa-users {
+    @include circle($primary-color, 35px, 22px, 7px);
+}
+
+.fa-phone-volume, .fa-globe, .fa-location-dot {
+    @include circle($primary-color, 25px, 15px, 5px);
+}
+
+.first-item-ed::before {
+    @include line(64px, 30px, 28px, 2px, $primary-color);
+}
+
+.education-item::before {
+    @include line(16px, 25px, 85px, 2px, $primary-color);
+}
+
+.first-item::before {
+    @include line(40px, 35px, 25px, 3px, $primary-color);
+}
+
+.first-item-contact::before {
+    @include line(40px, 60px, 35px, 3px, $primary-color);
+}
+
+.contact-item::before {
+    @include line(16px, 35px, 40px, 3px, $primary-color);
+}
+
+.job-experience-item::before {
+    @include line(16px, 25px, 127px, 3px, $primary-color);
+}
+
+.reference-item::before {
+    @include line(16px, 25px, 90px, 3px, $primary-color);
+}

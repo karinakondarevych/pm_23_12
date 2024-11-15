@@ -1,0 +1,25 @@
+@mixin circle($bg-color, $size, $font-size, $padding-top) {
+    border-radius: 50%;
+    width: $size;
+    height: $size;
+    background-color: $bg-color;
+    color: #283439;
+    text-align: center;
+    font-size: $font-size;
+    padding-top: $padding-top;
+}
+
+@mixin line($left, $top, $height, $width, $color) {
+    content: "";
+    position: absolute;
+    left: $left;
+    top: $top;
+    height: $height;
+    width: $width;
+    background-color: $color;
+}
+
+@mixin stars($color, $font-size) {
+    color: $color;
+    font-size: $font-size;
+}
