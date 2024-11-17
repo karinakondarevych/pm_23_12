@@ -4,6 +4,7 @@ const sass = require('gulp-sass')(require('sass'));
 const server = require('gulp-server-livereload');
 const clean = require('gulp-clean');
 const fs = require('fs');
+const uglify = require('gulp-uglify');
 
 const fileIncludeSetting = {
     prefix: '@@',
@@ -30,7 +31,11 @@ gulp.task('sass', function() { // scss у css
 });
 
 gulp.task('images', function() { // копіювання фото
-    return gulp.src('./src/img/**/*').pipe(gulp.dest('./dist/img/'))
+    return gulp.src('./src/img/**/*').pipe(gulp.dest('./dist/img/'));
+});
+
+gulp.task('js', function() { // js
+    return gulp.src('./src/js/*.js').pipe(uglify()).pipe(gulp.dest('./dist/js/'));
 });
 
 gulp.task('server', function() { // запуск серверу
@@ -43,4 +48,4 @@ gulp.task('watch', function() { // спостереження за змінам�
     gulp.watch('./src/img/**/*', gulp.series('images'));
 })
 
-gulp.task('default', gulp.series('clean', gulp.parallel('html', 'sass', 'images'), gulp.parallel('server', 'watch')));
+gulp.task('default', gulp.series('clean', gulp.parallel('html', 'sass', 'js', 'images'), gulp.parallel('server', 'watch')));
