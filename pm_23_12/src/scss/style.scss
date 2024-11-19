@@ -36,7 +36,7 @@
 }
 
 .far {
-    @include stars($primary-color, small);
+    @include stars($tertiary-color, small);
 }
 
 .year {
