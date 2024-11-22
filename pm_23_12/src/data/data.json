@@ -1,0 +1,12 @@
+[
+    {
+        "university": "Stanford University",
+        "degree": "Master degree graduate",
+        "years": "2011-2013"
+    },
+    {
+        "university": "University of Chicago",
+        "degree": "Bachelor degree graduate",
+        "years": "2007-2010" 
+    }
+]

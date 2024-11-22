@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .body {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
@@ -99,7 +100,7 @@
   position: absolute;
   left: 64px;
   top: 30px;
-  height: 28px;
+  height: 30px;
   width: 2px;
   background-color: #02c5dc;
 }
@@ -119,7 +120,7 @@
   position: absolute;
   left: 40px;
   top: 35px;
-  height: 25px;
+  height: 28px;
   width: 3px;
   background-color: #02c5dc;
 }
@@ -128,8 +129,8 @@
   content: "";
   position: absolute;
   left: 40px;
-  top: 60px;
-  height: 35px;
+  top: 57px;
+  height: 30px;
   width: 3px;
   background-color: #02c5dc;
 }
@@ -162,4 +163,43 @@
   height: 90px;
   width: 3px;
   background-color: #02c5dc;
+}
+
+.section-content {
+  transform: scaleY(0); /* Початково згорнуто */
+  transform-origin: top; /* Масштабування з верхньої частини */
+  opacity: 0; /* Початково невидимий */
+  overflow: hidden; /* Ховаємо зайвий вміст */
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.section-content.d-none {
+  transform: scaleY(0); /* Стиснутий стан */
+  opacity: 0; /* Прозорість */
+}
+
+.section-content:not(.d-none) {
+  transform: scaleY(1); /* Розгортання до нормального розміру */
+  opacity: 1; /* Відновлення прозорості */
+}
+
+.toggle-btn {
+  color: #02c5dc;
+  font-size: 1.2rem;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.toggle-btn i {
+  transition: transform 0.3s ease;
+}
+
+.fa-chevron-up {
+  transform: rotate(180deg); /* Повертає іконку догори */
+  transition: transform 0.3s ease; /* Анімація */
+}
+
+.fa-chevron-down {
+  transform: rotate(0deg); /* Нормальне положення */
+  transition: transform 0.3s ease;
 }

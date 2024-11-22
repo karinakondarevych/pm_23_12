@@ -1,0 +1,1 @@
+document.querySelectorAll(".toggle-btn").forEach(o=>{o.addEventListener("click",()=>{var e=o.closest("section").querySelector(".section-content"),t=o.querySelector("i");e.classList.toggle("d-none"),t.classList.toggle("fa-chevron-down"),t.classList.toggle("fa-chevron-up")})});

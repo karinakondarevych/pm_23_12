@@ -43,7 +43,7 @@
     color: $primary-color;
 }
 
-.fa-circle{
+.fa-circle {
     color: $primary-color;
     display: flex;
     align-items: center;
@@ -82,7 +82,7 @@
 }
 
 .first-item-ed::before {
-    @include line(64px, 30px, 28px, 2px, $primary-color);
+    @include line(64px, 30px, 30px, 2px, $primary-color);
 }
 
 .education-item::before {
@@ -90,11 +90,11 @@
 }
 
 .first-item::before {
-    @include line(40px, 35px, 25px, 3px, $primary-color);
+    @include line(40px, 35px, 28px, 3px, $primary-color);
 }
 
 .first-item-contact::before {
-    @include line(40px, 60px, 35px, 3px, $primary-color);
+    @include line(40px, 57px, 30px, 3px, $primary-color);
 }
 
 .contact-item::before {
@@ -107,4 +107,43 @@
 
 .reference-item::before {
     @include line(16px, 25px, 90px, 3px, $primary-color);
+}
+
+.section-content {
+    transform: scaleY(0); /* Початково згорнуто */
+    transform-origin: top; /* Масштабування з верхньої частини */
+    opacity: 0; /* Початково невидимий */
+    overflow: hidden; /* Ховаємо зайвий вміст */
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.section-content.d-none {
+    transform: scaleY(0); /* Стиснутий стан */
+    opacity: 0; /* Прозорість */
+}
+
+.section-content:not(.d-none) {
+    transform: scaleY(1); /* Розгортання до нормального розміру */
+    opacity: 1; /* Відновлення прозорості */
+}
+
+.toggle-btn {
+    color: $primary-color;
+    font-size: 1.2rem;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.toggle-btn i {
+    transition: transform 0.3s ease;
+}
+  
+.fa-chevron-up {
+    transform: rotate(180deg); /* Повертає іконку догори */
+    transition: transform 0.3s ease; /* Анімація */
+}
+
+.fa-chevron-down {
+    transform: rotate(0deg); /* Нормальне положення */
+    transition: transform 0.3s ease;
 }
