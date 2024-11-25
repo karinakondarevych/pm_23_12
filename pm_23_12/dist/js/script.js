@@ -1,1 +1,5 @@
-document.querySelectorAll(".toggle-btn").forEach(o=>{o.addEventListener("click",()=>{var e=o.closest("section").querySelector(".section-content"),t=o.querySelector("i");e.classList.toggle("d-none"),t.classList.toggle("fa-chevron-down"),t.classList.toggle("fa-chevron-up")})});
+document.querySelectorAll(".toggle-btn").forEach(a=>{a.addEventListener("click",()=>{var e=a.closest("section").querySelector(".section-content"),t=a.querySelector("i");e.classList.toggle("d-none"),t.classList.toggle("fa-chevron-down"),t.classList.toggle("fa-chevron-up")})});let xmlhttp=new XMLHttpRequest,url="/src/data/data.json";function renderData(e){let a=document.getElementById("education-container");e.forEach(e=>{var t=document.createElement("div");t.innerHTML=`
+            <h5>${e.university}</h5>
+            <p>${e.degree}</p>
+            <p>${e.years}</p>
+        `,a.appendChild(t)})}async function getData(){try{var e=await fetch("/src/data/data.json");if(!e.ok)throw new Error("Помилка при завантаженні даних");renderData(await e.json())}catch(e){console.error("Помилка під час отримання даних:",e)}}xmlhttp.onreadystatechange=function(){4===this.readyState&&(200===this.status?renderData(JSON.parse(this.responseText)):console.error("Помилка під час завантаження даних"))},xmlhttp.open("GET",url,!0),xmlhttp.send(),getData();
