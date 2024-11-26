@@ -23,3 +23,7 @@
     color: $color;
     font-size: $font-size;
 }
+
+@mixin toggle($degrees) {
+    transform: rotate($degrees);
+}

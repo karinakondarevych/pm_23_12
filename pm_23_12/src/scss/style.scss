@@ -109,24 +109,6 @@
     @include line(16px, 25px, 90px, 3px, $primary-color);
 }
 
-.section-content {
-    transform: scaleY(0); /* Початково згорнуто */
-    transform-origin: top; /* Масштабування з верхньої частини */
-    opacity: 0; /* Початково невидимий */
-    overflow: hidden; /* Ховаємо зайвий вміст */
-    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.section-content.d-none {
-    transform: scaleY(0); /* Стиснутий стан */
-    opacity: 0; /* Прозорість */
-}
-
-.section-content:not(.d-none) {
-    transform: scaleY(1); /* Розгортання до нормального розміру */
-    opacity: 1; /* Відновлення прозорості */
-}
-
 .toggle-btn {
     color: $primary-color;
     font-size: 1.2rem;
@@ -137,13 +119,16 @@
 .toggle-btn i {
     transition: transform 0.3s ease;
 }
-  
+
+
 .fa-chevron-up {
-    transform: rotate(180deg); /* Повертає іконку догори */
-    transition: transform 0.3s ease; /* Анімація */
+    @include toggle(180deg);
 }
 
 .fa-chevron-down {
-    transform: rotate(0deg); /* Нормальне положення */
-    transition: transform 0.3s ease;
+    @include toggle(0deg);
+}
+
+#xmlHttpRequest, #fetchAPI {
+    color: $tertiary-color;
 }
